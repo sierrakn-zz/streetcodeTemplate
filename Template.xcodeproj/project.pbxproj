@@ -11,6 +11,7 @@
 		256DD3D31E93A84100DC5D31 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256DD3D21E93A84100DC5D31 /* CustomTableViewController.swift */; };
 		256DD3D51E93A89200DC5D31 /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256DD3D41E93A89200DC5D31 /* CustomCollectionViewController.swift */; };
 		256DD3D71E93A97C00DC5D31 /* CustomMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256DD3D61E93A97C00DC5D31 /* CustomMapViewController.swift */; };
+		256DD3D91E93AD1800DC5D31 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256DD3D81E93AD1800DC5D31 /* CustomCollectionViewCell.swift */; };
 		A56203D41E933FEA00122BDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56203D31E933FEA00122BDB /* AppDelegate.swift */; };
 		A56203D91E933FEA00122BDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56203D71E933FEA00122BDB /* Main.storyboard */; };
 		A56203DB1E933FEA00122BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56203DA1E933FEA00122BDB /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		256DD3D21E93A84100DC5D31 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		256DD3D41E93A89200DC5D31 /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
 		256DD3D61E93A97C00DC5D31 /* CustomMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMapViewController.swift; sourceTree = "<group>"; };
+		256DD3D81E93AD1800DC5D31 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		A56203D01E933FEA00122BDB /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56203D31E933FEA00122BDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A56203D81E933FEA00122BDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				A56203D31E933FEA00122BDB /* AppDelegate.swift */,
 				A56203D71E933FEA00122BDB /* Main.storyboard */,
 				256DD3D41E93A89200DC5D31 /* CustomCollectionViewController.swift */,
+				256DD3D81E93AD1800DC5D31 /* CustomCollectionViewCell.swift */,
 				256DD3D21E93A84100DC5D31 /* CustomTableViewController.swift */,
 				256DD3D01E93A82300DC5D31 /* CustomTableViewCell.swift */,
 				256DD3D61E93A97C00DC5D31 /* CustomMapViewController.swift */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				256DD3D11E93A82300DC5D31 /* CustomTableViewCell.swift in Sources */,
+				256DD3D91E93AD1800DC5D31 /* CustomCollectionViewCell.swift in Sources */,
 				256DD3D31E93A84100DC5D31 /* CustomTableViewController.swift in Sources */,
 				A56203D41E933FEA00122BDB /* AppDelegate.swift in Sources */,
 				256DD3D51E93A89200DC5D31 /* CustomCollectionViewController.swift in Sources */,
