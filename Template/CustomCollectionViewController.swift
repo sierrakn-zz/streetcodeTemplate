@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CustomCollectionViewController: UICollectionViewController {
 
@@ -88,4 +89,15 @@ class CustomCollectionViewController: UICollectionViewController {
     }
     */
 
+    @IBAction func onSignOutButton(_ sender: UIBarButtonItem) {
+        
+        do {
+            
+            try FIRAuth.auth()?.signOut()
+        }
+        catch let error {
+            
+            print("Unable to sign out: \(error)")
+        }
+    }
 }

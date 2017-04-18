@@ -9,26 +9,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="IOa-zF-oC5">
             <objects>
-                <tabBarController id="7UH-iD-HM5" sceneMemberID="viewController">
+                <tabBarController id="7UH-iD-HM5" customClass="CustomTabBarController" customModule="Template" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6pd-Rk-yDi"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="7Oe-Gi-tSB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ZtS-63-YAt" kind="relationship" relationship="viewControllers" id="ryJ-9I-CHP"/>
-                        <segue destination="Tl7-ha-dJs" kind="relationship" relationship="viewControllers" id="2vg-Xe-ct0"/>
-                        <segue destination="bup-px-mTG" kind="relationship" relationship="viewControllers" id="ju8-k5-hCo"/>
+                        <segue destination="jvN-VA-gDQ" kind="relationship" relationship="viewControllers" id="ryJ-9I-CHP"/>
+                        <segue destination="9Sq-Jf-Jki" kind="relationship" relationship="viewControllers" id="2vg-Xe-ct0"/>
+                        <segue destination="cKH-rb-CvU" kind="relationship" relationship="viewControllers" id="ju8-k5-hCo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoM-N0-r2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-874" y="-176"/>
         </scene>
-        <!--Collection View-->
+        <!--Custom Collection View Controller-->
         <scene sceneID="ByV-RD-1xZ">
             <objects>
                 <collectionViewController id="Tl7-ha-dJs" customClass="CustomCollectionViewController" customModule="Template" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,13 +67,19 @@
                             <outlet property="delegate" destination="Tl7-ha-dJs" id="rF5-cJ-JFo"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Collection View" image="ProfileIcon" id="d5X-zo-oYM"/>
+                    <navigationItem key="navigationItem" id="SAG-1x-SDb">
+                        <barButtonItem key="leftBarButtonItem" title="Sign out" id="qqH-f5-ARQ">
+                            <connections>
+                                <action selector="onSignOutButton:" destination="Tl7-ha-dJs" id="qV3-Wc-NDa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HF4-BG-HIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1911.2" y="587.85607196401804"/>
+            <point key="canvasLocation" x="-972" y="587.85607196401804"/>
         </scene>
-        <!--Table View-->
+        <!--Custom Table View Controller-->
         <scene sceneID="QMg-Hx-oNp">
             <objects>
                 <tableViewController id="ZtS-63-YAt" customClass="CustomTableViewController" customModule="Template" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,13 +137,19 @@ East Palo Alto, CA 94303</string>
                             <outlet property="delegate" destination="ZtS-63-YAt" id="T7J-dN-Ex2"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Table View" image="HomeIcon" id="5Qg-T5-kaM"/>
+                    <navigationItem key="navigationItem" id="CW3-bi-Pwl">
+                        <barButtonItem key="leftBarButtonItem" title="Sign out" id="0Xb-km-0mU">
+                            <connections>
+                                <action selector="onSignOutButton:" destination="ZtS-63-YAt" id="lha-Bc-b1d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZJ-t8-hE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-874" y="588"/>
+            <point key="canvasLocation" x="1004" y="587.85607196401804"/>
         </scene>
-        <!--Map View-->
+        <!--Custom Map View Controller-->
         <scene sceneID="zyU-p4-qck">
             <objects>
                 <viewController id="bup-px-mTG" customClass="CustomMapViewController" customModule="Template" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +176,13 @@ East Palo Alto, CA 94303</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map View" image="MapIcon" id="4Fg-dR-myy"/>
+                    <navigationItem key="navigationItem" id="N6a-4w-JyQ">
+                        <barButtonItem key="leftBarButtonItem" title="Sign out" id="tam-GY-eG6">
+                            <connections>
+                                <action selector="onSignOutButton:" destination="bup-px-mTG" id="Kro-Lo-CF7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="currentLocationButton" destination="MJE-CZ-OVQ" id="DIm-rj-NK8"/>
                         <outlet property="mapView" destination="hjO-hP-0aZ" id="zaT-sx-T8X"/>
@@ -171,7 +190,64 @@ East Palo Alto, CA 94303</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B58-Ds-mEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="588"/>
+            <point key="canvasLocation" x="2975.1999999999998" y="587.85607196401804"/>
+        </scene>
+        <!--Collection View-->
+        <scene sceneID="vOr-MU-nze">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Sq-Jf-Jki" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Collection View" image="ProfileIcon" id="d5X-zo-oYM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kj3-3O-u8b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tl7-ha-dJs" kind="relationship" relationship="rootViewController" id="DZQ-EX-96B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pMH-Uu-B1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1911.2" y="587.85607196401804"/>
+        </scene>
+        <!--Table View-->
+        <scene sceneID="LeA-Km-73R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jvN-VA-gDQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Table View" image="HomeIcon" id="5Qg-T5-kaM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZSF-ZR-Lxc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZtS-63-YAt" kind="relationship" relationship="rootViewController" id="YII-ht-Bfs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zqc-Nr-i1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="587.85607196401804"/>
+        </scene>
+        <!--Map View-->
+        <scene sceneID="vdG-eC-Igy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cKH-rb-CvU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map View" image="MapIcon" id="4Fg-dR-myy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QXp-y6-nUB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bup-px-mTG" kind="relationship" relationship="rootViewController" id="93f-jf-UQu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2Y-rt-ca3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="587.85607196401804"/>
         </scene>
     </scenes>
     <resources>

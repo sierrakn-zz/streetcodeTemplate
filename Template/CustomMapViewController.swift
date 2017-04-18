@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit   // Special import.
+import Firebase
 
 class CustomMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
@@ -103,4 +104,15 @@ class CustomMapViewController: UIViewController, CLLocationManagerDelegate, MKMa
     }
     */
 
+    @IBAction func onSignOutButton(_ sender: UIBarButtonItem) {
+
+        do {
+            
+            try FIRAuth.auth()?.signOut()
+        }
+        catch let error {
+            
+            print("Unable to sign out: \(error)")
+        }
+    }
 }
